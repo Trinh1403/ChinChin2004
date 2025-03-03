@@ -3,35 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên hệ - Tên của bạn</title>
+    <title>Liên Hệ - [Tên của bạn]</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="about.html">Giới thiệu</a></li>
-                <li><a href="projects.html">Dự án</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="projects.html">Dự Án</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Liên hệ với tôi</h1>
-        <form action="#" method="post">
-            <label for="name">Họ và tên:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Nội dung:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Gửi</button>
-        </form>
+        <section class="contact">
+            <h1>Liên Hệ</h1>
+            <p>Nếu bạn có bất kỳ câu hỏi hoặc muốn hợp tác, đừng ngần ngại liên hệ với tôi qua các phương thức sau:</p>
+            <ul>
+                <li>Email: kookienguyen01091304@gmail.com</li>
+                <li>Số điện thoại: 0342113236</li>
+                <li>Mạng xã hội:
+                    <ul>
+                        <li><a href="https://www.facebook.com/nguyen.thi.tuyet.trinh.458282/">Facebook</a></li>
+                        <li><a href="https://x.com/trinh1403">Twitter</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form action="#" method="post">
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Nội dung tin nhắn:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2023 - Tên của bạn</p>
+        <div class="footer-content">
+            <div class="contact-info">
+                <span>Phone: 0342113236</span>
+                <span>Email: kookienguyen01091304@gmail.com</span>
+            </div>
+            <div class="social-media">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li><a href="https://x.com/trinh1403">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/nguyen.thi.tuyet.trinh.458282/">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

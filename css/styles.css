@@ -1,40 +1,35 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 0;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background: url('../images/FT.jpg') no-repeat center center fixed;
-    background-size: 100% auto; /* Hiển thị đúng kích thước ảnh */
-    background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn */
-    image-rendering: crisp-edges; /* Tăng độ sắc nét của ảnh */
-    color: #fff; /* Đảm bảo chữ dễ đọc trên nền ảnh */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: #444; /* Màu nền mới cho header */
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border: none; /* Không có viền */
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Căn giữa các mục trong nav */
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -44,18 +39,146 @@ nav ul li a {
 }
 
 main {
-    min-height: 100vh;
-    padding-bottom: 50px;
-    margin-top: 60px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px; /* Điều chỉnh dựa trên chiều cao của header */
+    margin-bottom: 60px; /* Điều chỉnh dựa trên chiều cao của footer */
+    padding-bottom: 100px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 300px; /* Ảnh profile lớn hơn */
+    height: 300px; /* Ảnh profile lớn hơn */
+    margin-right: 40px;
+}
+
+.intro {
+    text-align: left;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.intro h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-weight: normal; /* Không in đậm */
+}
+
+.intro h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: normal; /* Không in đậm */
+}
+
+.links {
+    margin-top: 20px;
+    display: flex; /* Các nút liên kết nằm chung một hàng */
+    justify-content: space-between; /* Căn đều khoảng cách giữa các nút */
+}
+
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%; /* Làm cho nút tròn */
+    font-size: 1em;
+    text-align: center;
+    width: 80px; /* Chiều rộng cố định cho nút tròn */
+    height: 80px; /* Chiều cao cố định cho nút tròn */
+    line-height: 80px; /* Căn giữa văn bản trong nút tròn */
+}
+
+/* CSS cho trang Projects */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h2 {
+    margin-top: 0;
+}
+
+.project-item p {
+    margin-bottom: 20px;
+}
+
+.project-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    background: #555; /* Màu nền mới cho footer */
     color: #fff;
+    padding: 20px; /* Tăng padding để tạo khoảng cách */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    height: 40px; /* Đặt chiều cao cố định cho footer */
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử */
+    align-items: center;
+    gap: 60px; /* Khoảng cách giữa các phần tử */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    gap: 300px; /* Khoảng cách giữa phone và email */
+}
+
+.social-media {
+    margin-left: 300px; /* Tăng khoảng cách giữa email và Follow Me */
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.social-media ul li {
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    text-decoration: none;
 }
